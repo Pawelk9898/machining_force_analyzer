@@ -31,6 +31,7 @@ private:
     void renderSimulationPanel();
     void renderForceChart();
     void renderStatusBar();
+    void addForceData(double time, double fx, double fy, double fz);
 
     // References to core objects
     VoxelGrid&      m_grid;
