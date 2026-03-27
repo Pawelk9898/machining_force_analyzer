@@ -1,0 +1,10 @@
+^D:\MACHINING_FORCE_ANALYZER_NEW\CMAKELISTS.TXT
+setlocal
+D:\Visual_studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SD:/machining_force_analyzer_new -BD:/machining_force_analyzer_new/build --check-stamp-file D:/machining_force_analyzer_new/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

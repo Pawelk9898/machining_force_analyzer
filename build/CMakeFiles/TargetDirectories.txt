@@ -1,0 +1,3 @@
+D:/machining_force_analyzer_new/build/CMakeFiles/MachiningForceSimulator.dir
+D:/machining_force_analyzer_new/build/CMakeFiles/ALL_BUILD.dir
+D:/machining_force_analyzer_new/build/CMakeFiles/ZERO_CHECK.dir
