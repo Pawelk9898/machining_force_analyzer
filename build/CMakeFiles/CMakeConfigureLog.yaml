@@ -6817,3 +6817,312 @@ events:
         - "D:/Visual_studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
         - "C:/Program Files (x86)/MachiningForceSimulator"
 ...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:14 (find_package)"
+    name: "glad"
+    configs:
+      -
+        filename: "gladConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "glad-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "glad"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/machining_force_analyzer_new/build/CMakeFiles/pkgRedirects/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/machining_force_analyzer_new/build/CMakeFiles/pkgRedirects/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/VC/vcpackages/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/VC/vcpackages/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/CommonExtensions/Microsoft/TestWindow/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/CommonExtensions/Microsoft/TestWindow/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/MSBuild/Current/Bin/Roslyn/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/MSBuild/Current/Bin/Roslyn/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Team Tools/DiagnosticsHub/Collector/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Team Tools/DiagnosticsHub/Collector/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/bin/x64/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/bin/x64/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/MSBuild/Current/Bin/amd64/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/MSBuild/Current/Bin/amd64/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/Tools/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/Tools/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/vs_code/Microsoft VS Code/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/vs_code/Microsoft VS Code/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/git/Git/cmd/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/git/Git/cmd/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/node/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/node/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/Common7/IDE/VC/Linux/bin/ConnectionManagerExe/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/VC/vcpkg/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/Visual_studio/VC/vcpkg/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/gladConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/glad-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "D:\\Visual_studio\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64"
+        - "D:\\Visual_studio\\Common7\\IDE\\VC\\VCPackages"
+        - "D:\\Visual_studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
+        - "D:\\Visual_studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
+        - "D:\\Visual_studio\\MSBuild\\Current\\bin\\Roslyn"
+        - "D:\\Visual_studio\\Team Tools\\DiagnosticsHub\\Collector"
+        - "D:\\Visual_studio\\Common7\\IDE\\Extensions\\Microsoft\\CodeCoverage.Console"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64"
+        - "D:\\Visual_studio\\\\MSBuild\\Current\\Bin\\amd64"
+        - "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
+        - "D:\\Visual_studio\\Common7\\IDE\\"
+        - "D:\\Visual_studio\\Common7\\Tools\\"
+        - "D:\\vs_code\\Microsoft VS Code"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "D:\\git\\Git\\cmd"
+        - "D:\\node\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\U\u0159ytkownik\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "D:\\vs_code\\Microsoft VS Code\\bin"
+        - "C:\\Users\\U\u0159ytkownik\\AppData\\Roaming\\npm"
+        - "D:\\Visual_studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin"
+        - "D:\\Visual_studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja"
+        - "D:\\Visual_studio\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe"
+        - "D:\\Visual_studio\\VC\\vcpkg"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/MachiningForceSimulator"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "D:/Visual_studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/MachiningForceSimulator"
+...

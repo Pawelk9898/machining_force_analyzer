@@ -1,42 +1,53 @@
-cmake_minimum_required(VERSION 3.15)
-project(MachiningForceSimulator)
+cmake_minimum_required(VERSION 3.20)
+project(MachiningForceSimulator VERSION 0.1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 1. Find Packages
-find_package(glfw3 CONFIG REQUIRED)
+# --- vcpkg integration ---
+if(DEFINED ENV{VCPKG_ROOT})
+    set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+        CACHE STRING "")
+endif()
+
+# --- Find packages ---
 find_package(glad CONFIG REQUIRED)
+find_package(glfw3 CONFIG REQUIRED)
+find_package(glm CONFIG REQUIRED)
 find_package(imgui CONFIG REQUIRED)
 find_package(implot CONFIG REQUIRED)
-find_package(OpenGL REQUIRED)
 
-# 2. Collect Sources (GLOB is okay for small projects, but manual is safer)
-file(GLOB_RECURSE SOURCES 
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.c"    # Added .c for glad if necessary
+# --- Collect all source files ---
+file(GLOB_RECURSE SOURCES
+    "src/*.cpp"
 )
 
-# 3. Create Executable
+# --- Define executable ---
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-# 4. Include Directories
-target_include_directories(${PROJECT_NAME} PRIVATE 
-    "${CMAKE_CURRENT_SOURCE_DIR}/include"
-    # Often vcpkg puts imgui headers in a subfolder
+# --- Include directories ---
+target_include_directories(${PROJECT_NAME} PRIVATE
+    include
+    third_party
 )
 
-# 5. Link Libraries
-# Note: Check if your 'glad' target is glad::glad or just glad
-target_link_libraries(${PROJECT_NAME} PRIVATE 
-    glfw 
-    glad::glad 
-    imgui::imgui 
-    implot::implot 
-    OpenGL::GL
+# --- Link libraries ---
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    glad::glad
+    glfw
+    glm::glm
+    imgui::imgui
+    implot::implot
 )
 
-# 6. Windows Specifics (Ensures OpenGL and Math link correctly)
+# --- Windows specific ---
 if(WIN32)
-    target_link_libraries(${PROJECT_NAME} PRIVATE Gdi32 User32 Shell32)
+    target_link_libraries(${PROJECT_NAME} PRIVATE opengl32)
 endif()
+
+# --- Copy assets to build folder ---
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/assets
+    $<TARGET_FILE_DIR:${PROJECT_NAME}>/assets
+)
