@@ -14,10 +14,7 @@ namespace MathSim {
         bool isSolid(int x, int y, int z) const;
         uint64_t subtractCylinder(Vector3 center, double radius, double height);
 
-        // Reset grid back to fully solid (for loading new G-code)
         void reset();
-
-        // How many voxels are still solid (for UI progress bar)
         uint64_t getSolidCount() const;
 
         Bounds getBounds() const { return m_bounds; }

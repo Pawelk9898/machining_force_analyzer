@@ -1,29 +1,35 @@
 #pragma once
-#include <vector>
+#include "Common.h"
 #include "voxel/VoxelGrid.h"
-#include <glad/glad.h> // Or glad.h
+#include <glad/glad.h>
 
 namespace MathSim {
 
 struct VoxelVertex {
     float x, y, z;
-    float r, g, b; // Color based on force or height
+    float r, g, b;
+};
+
+struct Camera {
+    float yaw      = 45.0f;
+    float pitch    = 35.0f;
+    float distance = 200.0f;
+    float targetX  = 0.0f;
+    float targetY  = 0.0f;
+    float targetZ  = -10.0f;
 };
 
 class VoxelRenderer {
 public:
     VoxelRenderer();
     ~VoxelRenderer();
-
-    // Updates the GPU buffer based on the current VoxelGrid state
     void updateBuffer(const VoxelGrid& grid);
-
-    // Draws the stock to the screen
-    void draw();
-
+    void draw(const Camera& cam);
 private:
-    GLuint m_vbo, m_vao;
-    size_t m_vertexCount = 0;
+    GLuint m_vao           = 0;
+    GLuint m_vbo           = 0;
+    GLuint m_shaderProgram = 0;
+    size_t m_vertexCount   = 0;
 };
 
 } // namespace MathSim

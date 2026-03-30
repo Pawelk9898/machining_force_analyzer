@@ -46,11 +46,11 @@ std::vector<StepResult> ToolpathEngine::executeG1(Vector3 start, Vector3 end,
     for (int i = 0; i <= numSteps; ++i) {
         double t = (numSteps == 0) ? 1.0 : static_cast<double>(i) / numSteps;
 
-        Vector3 currentPos = {
+        Vector3 currentPos(
             start.x + t * dx,
             start.y + t * dy,
             start.z + t * dz
-        };
+        );
 
         // Subtract material and get removal count
         uint64_t removed = m_grid.subtractCylinder(
@@ -72,7 +72,7 @@ std::vector<StepResult> ToolpathEngine::executeG1(Vector3 start, Vector3 end,
         chipThickness = std::max(chipThickness, 0.0);
 
         // Calculate forces using Altintas model
-        ForceVector forces = { 0.0, 0.0, 0.0, 0.0 };
+        ForceVector forces = { 0.0, 0.0, 0.0 };
         if (removed > 0 && chipThickness > 1e-9) {
             forces = forceModel.calculateInstantaneousForce(
                 chipThickness,

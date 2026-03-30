@@ -4,11 +4,14 @@
         {
             "name": "windows-vcpkg",
             "displayName": "Windows with vcpkg",
-            "generator": "Visual Studio 17 2022",
+            "generator": "NMake Makefiles",
             "binaryDir": "${sourceDir}/build",
             "cacheVariables": {
                 "CMAKE_TOOLCHAIN_FILE": "D:/vcpkg/scripts/buildsystems/vcpkg.cmake",
-                "CMAKE_BUILD_TYPE": "Debug"
+                "CMAKE_BUILD_TYPE": "Debug",
+                "VCPKG_TARGET_TRIPLET": "x64-windows",
+                "CMAKE_C_COMPILER": "D:/Visual_studio/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe",
+                "CMAKE_CXX_COMPILER": "D:/Visual_studio/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe"
             }
         }
     ]
