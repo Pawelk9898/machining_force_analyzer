@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/machining_force_analyzer_new/src/gcode/GCodeParser.cpp" "CMakeFiles/MachiningForceSimulator.dir/src/gcode/GCodeParser.cpp.obj" "msvc" "CMakeFiles/MachiningForceSimulator.dir/src/gcode/GCodeParser.cpp.obj.d"
   "D:/machining_force_analyzer_new/src/main.cpp" "CMakeFiles/MachiningForceSimulator.dir/src/main.cpp.obj" "msvc" "CMakeFiles/MachiningForceSimulator.dir/src/main.cpp.obj.d"
   "D:/machining_force_analyzer_new/src/renderer/VoxelRenderer.cpp" "CMakeFiles/MachiningForceSimulator.dir/src/renderer/VoxelRenderer.cpp.obj" "msvc" "CMakeFiles/MachiningForceSimulator.dir/src/renderer/VoxelRenderer.cpp.obj.d"
+  "D:/machining_force_analyzer_new/src/simulator/simulator.cpp" "CMakeFiles/MachiningForceSimulator.dir/src/simulator/simulator.cpp.obj" "msvc" "CMakeFiles/MachiningForceSimulator.dir/src/simulator/simulator.cpp.obj.d"
   "D:/machining_force_analyzer_new/src/toolpath/ToolpathEngine.cpp" "CMakeFiles/MachiningForceSimulator.dir/src/toolpath/ToolpathEngine.cpp.obj" "msvc" "CMakeFiles/MachiningForceSimulator.dir/src/toolpath/ToolpathEngine.cpp.obj.d"
   "D:/machining_force_analyzer_new/src/ui/UIManager.cpp" "CMakeFiles/MachiningForceSimulator.dir/src/ui/UIManager.cpp.obj" "msvc" "CMakeFiles/MachiningForceSimulator.dir/src/ui/UIManager.cpp.obj.d"
   "D:/machining_force_analyzer_new/src/voxel/VoxelGrid.cpp" "CMakeFiles/MachiningForceSimulator.dir/src/voxel/VoxelGrid.cpp.obj" "msvc" "CMakeFiles/MachiningForceSimulator.dir/src/voxel/VoxelGrid.cpp.obj.d"

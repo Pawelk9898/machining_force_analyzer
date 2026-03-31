@@ -214,6 +214,30 @@ src\renderer\VoxelRenderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MachiningForceSimulator.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\MachiningForceSimulator.dir\src\renderer\VoxelRenderer.cpp.s
 .PHONY : src\renderer\VoxelRenderer.cpp.s
 
+src\simulator\simulator.obj: src\simulator\simulator.cpp.obj
+.PHONY : src\simulator\simulator.obj
+
+# target to build an object file
+src\simulator\simulator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MachiningForceSimulator.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.obj
+.PHONY : src\simulator\simulator.cpp.obj
+
+src\simulator\simulator.i: src\simulator\simulator.cpp.i
+.PHONY : src\simulator\simulator.i
+
+# target to preprocess a source file
+src\simulator\simulator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MachiningForceSimulator.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.i
+.PHONY : src\simulator\simulator.cpp.i
+
+src\simulator\simulator.s: src\simulator\simulator.cpp.s
+.PHONY : src\simulator\simulator.s
+
+# target to generate assembly for a file
+src\simulator\simulator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MachiningForceSimulator.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.s
+.PHONY : src\simulator\simulator.cpp.s
+
 src\toolpath\ToolpathEngine.obj: src\toolpath\ToolpathEngine.cpp.obj
 .PHONY : src\toolpath\ToolpathEngine.obj
 
@@ -307,6 +331,9 @@ help:
 	@echo ... src/renderer/VoxelRenderer.obj
 	@echo ... src/renderer/VoxelRenderer.i
 	@echo ... src/renderer/VoxelRenderer.s
+	@echo ... src/simulator/simulator.obj
+	@echo ... src/simulator/simulator.i
+	@echo ... src/simulator/simulator.s
 	@echo ... src/toolpath/ToolpathEngine.obj
 	@echo ... src/toolpath/ToolpathEngine.i
 	@echo ... src/toolpath/ToolpathEngine.s

@@ -94,8 +94,10 @@ D:/Visual_studio/VC/Tools/MSVC/14.50.35717/include/vector
 D:/Visual_studio/VC/Tools/MSVC/14.50.35717/include/__msvc_bit_utils.hpp
 D:/machining_force_analyzer_new/include/Common.h
 D:/Visual_studio/VC/Tools/MSVC/14.50.35717/include/cmath
-D:/machining_force_analyzer_new/include/toolpath/ToolpathEngine.h
+D:/machining_force_analyzer_new/include/simulator/Simulator.h
 D:/machining_force_analyzer_new/include/voxel/VoxelGrid.h
+D:/machining_force_analyzer_new/include/force/ForceModel.h
+D:/machining_force_analyzer_new/include/toolpath/ToolpathEngine.h
 D:/Visual_studio/VC/Tools/MSVC/14.50.35717/include/fstream
 D:/Visual_studio/VC/Tools/MSVC/14.50.35717/include/__msvc_filebuf.hpp
 D:/Visual_studio/VC/Tools/MSVC/14.50.35717/include/streambuf

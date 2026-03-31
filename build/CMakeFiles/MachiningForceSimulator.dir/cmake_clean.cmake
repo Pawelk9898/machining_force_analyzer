@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MachiningForceSimulator.dir/src/main.cpp.obj.d"
   "CMakeFiles/MachiningForceSimulator.dir/src/renderer/VoxelRenderer.cpp.obj"
   "CMakeFiles/MachiningForceSimulator.dir/src/renderer/VoxelRenderer.cpp.obj.d"
+  "CMakeFiles/MachiningForceSimulator.dir/src/simulator/simulator.cpp.obj"
+  "CMakeFiles/MachiningForceSimulator.dir/src/simulator/simulator.cpp.obj.d"
   "CMakeFiles/MachiningForceSimulator.dir/src/toolpath/ToolpathEngine.cpp.obj"
   "CMakeFiles/MachiningForceSimulator.dir/src/toolpath/ToolpathEngine.cpp.obj.d"
   "CMakeFiles/MachiningForceSimulator.dir/src/ui/UIManager.cpp.obj"

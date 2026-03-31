@@ -1,16 +1,14 @@
 #include "ui/UIManager.h"
 #include "imgui.h"
 #include "implot.h"
-#define _USE_MATH_DEFINES
-#include "force/ForceModel.h"
-#include <cmath>
 #include <algorithm>
+
 namespace MathSim {
 
-UIManager::UIManager(VoxelGrid& grid, ToolpathEngine& engine,
+UIManager::UIManager(VoxelGrid& grid, Simulator& simulator,
                      ForceModel& forceModel, GCodeParser& parser)
     : m_grid(grid)
-    , m_engine(engine)
+    , m_simulator(simulator)
     , m_forceModel(forceModel)
     , m_parser(parser)
 {
@@ -34,21 +32,19 @@ void UIManager::renderToolPanel() {
 
     ImGui::Text("Geometry");
     ImGui::Separator();
-    ImGui::SliderFloat("Diameter (mm)",    &m_diameter,   0.5f,  50.0f);
-    ImGui::SliderFloat("Flute length (mm)",&m_height,     5.0f, 100.0f);
-    ImGui::SliderInt  ("Num flutes",       &m_numFlutes,  1,     8);
-    ImGui::SliderFloat("RPM",              &m_rpm,        100.0f, 20000.0f);
-    ImGui::SliderFloat("Helix angle (deg)",&m_helixAngle, 0.0f,  60.0f);
-    ImGui::SliderFloat("Rake angle (deg)", &m_rakeAngle, -10.0f, 30.0f);
+    ImGui::SliderFloat("Diameter (mm)",     &m_diameter,   0.5f,  50.0f);
+    ImGui::SliderFloat("Flute length (mm)", &m_height,     5.0f, 100.0f);
+    ImGui::SliderInt  ("Num flutes",        &m_numFlutes,  1,     8);
+    ImGui::SliderFloat("RPM",               &m_rpm,        100.0f, 20000.0f);
+    ImGui::SliderFloat("Helix angle (deg)", &m_helixAngle, 0.0f,  60.0f);
+    ImGui::SliderFloat("Rake angle (deg)",  &m_rakeAngle, -10.0f, 30.0f);
 
     ImGui::Spacing();
     ImGui::Text("Material");
     ImGui::Separator();
     const char* materials[] = {
-        "Aluminum 7075",
-        "Steel 4140",
-        "Titanium Ti-6Al-4V",
-        "Stainless Steel 316"
+        "Aluminum 7075", "Steel 4140",
+        "Titanium Ti-6Al-4V", "Stainless Steel 316"
     };
     if (ImGui::Combo("Material", &m_materialIdx, materials, 4)) {
         switch (m_materialIdx) {
@@ -68,7 +64,6 @@ void UIManager::renderToolPanel() {
         currentTool.helixAngle = static_cast<double>(m_helixAngle);
         currentTool.rakeAngle  = static_cast<double>(m_rakeAngle);
     }
-
     ImGui::End();
 }
 
@@ -105,7 +100,6 @@ void UIManager::renderStockPanel() {
         m_removedVoxels = 0;
         m_gcodeStatus = "Stock reset - reload G-code";
     }
-
     ImGui::End();
 }
 
@@ -118,17 +112,16 @@ void UIManager::renderGCodePanel() {
     ImGui::InputText("##path", m_gcodePathBuf, sizeof(m_gcodePathBuf));
 
     ImGui::Spacing();
-    if (ImGui::Button("Load & Run", ImVec2(-1, 0))) {
-        m_grid.reset();
-        m_fxHistory.clear();
-        m_fyHistory.clear();
-        m_fzHistory.clear();
-        m_timeHistory.clear();
-        m_removedVoxels = 0;
-
-        bool ok = m_parser.parseFile(std::string(m_gcodePathBuf), currentTool);
-        if (ok) {
-            m_gcodeStatus    = "Loaded successfully";
+    if (ImGui::Button("Load", ImVec2(-1, 0))) {
+        bool ok = m_parser.parseFile(std::string(m_gcodePathBuf));
+        if (ok && !m_parser.getMoves().empty()) {
+            m_simulator.loadMoves(m_parser.getMoves(), currentTool);
+            m_fxHistory.clear();
+            m_fyHistory.clear();
+            m_fzHistory.clear();
+            m_timeHistory.clear();
+            m_removedVoxels = 0;
+            m_gcodeStatus   = "Loaded - press Play";
             simulationLoaded = true;
         } else {
             m_gcodeStatus    = "ERROR: file not found";
@@ -141,37 +134,41 @@ void UIManager::renderGCodePanel() {
         simulationLoaded ? ImVec4(0,1,0,1) : ImVec4(1,0.4f,0.4f,1),
         "%s", m_gcodeStatus.c_str()
     );
-
     ImGui::End();
 }
 
 void UIManager::renderSimulationPanel() {
     ImGui::SetNextWindowPos(ImVec2(300, 10), ImGuiCond_FirstUseEver);
-    ImGui::SetNextWindowSize(ImVec2(200, 120), ImGuiCond_FirstUseEver);
+    ImGui::SetNextWindowSize(ImVec2(220, 130), ImGuiCond_FirstUseEver);
     ImGui::Begin("Simulation");
 
-    if (ImGui::Button(simulationRunning ? "Pause" : "Play", ImVec2(80, 0)))
-        simulationRunning = !simulationRunning;
+    // Play/Pause button
+    if (ImGui::Button(m_simulator.isPlaying() ? "Pause" : "Play", ImVec2(80, 0))) {
+        if (m_simulator.isPlaying()) m_simulator.pause();
+        else                         m_simulator.play();
+    }
 
     ImGui::SameLine();
     if (ImGui::Button("Reset", ImVec2(80, 0))) {
-        simulationRunning = false;
-        simulationLoaded  = false;
-        m_grid.reset();
+        m_simulator.reset();
         m_fxHistory.clear();
         m_fyHistory.clear();
         m_fzHistory.clear();
         m_timeHistory.clear();
         m_removedVoxels = 0;
-        m_gcodeStatus   = "No file loaded";
+        m_gcodeStatus   = "Reset - press Play";
     }
 
     ImGui::SliderFloat("Speed", &simulationSpeed, 0.1f, 10.0f);
+
+    // Progress bar
+    ImGui::ProgressBar(m_simulator.getProgress(), ImVec2(-1, 0));
+
     ImGui::End();
 }
 
 void UIManager::renderForceChart() {
-    ImGui::SetNextWindowPos(ImVec2(300, 140), ImGuiCond_FirstUseEver);
+    ImGui::SetNextWindowPos(ImVec2(300, 150), ImGuiCond_FirstUseEver);
     ImGui::SetNextWindowSize(ImVec2(660, 300), ImGuiCond_FirstUseEver);
     ImGui::Begin("Cutting Forces");
 
@@ -207,7 +204,8 @@ void UIManager::renderStatusBar() {
     double pct = m_totalVoxels > 0
         ? 100.0 * m_removedVoxels / m_totalVoxels : 0.0;
 
-    ImGui::Text("Voxels removed: %llu / %llu  (%.1f%%)   |   Material: %s   |   %.1f FPS",
+    ImGui::Text(
+        "Voxels: %llu / %llu (%.1f%%)  |  Material: %s  |  %.1f FPS",
         (unsigned long long)m_removedVoxels,
         (unsigned long long)m_totalVoxels,
         pct,

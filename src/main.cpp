@@ -11,13 +11,12 @@
 
 #include "Common.h"
 #include "voxel/VoxelGrid.h"
-#include "toolpath/ToolpathEngine.h"
 #include "gcode/GCodeParser.h"
 #include "force/ForceModel.h"
+#include "simulator/Simulator.h"
 #include "renderer/VoxelRenderer.h"
 #include "ui/UIManager.h"
 
-// Global camera and mouse state
 static MathSim::Camera g_cam;
 static double g_lastMouseX = 0.0;
 static double g_lastMouseY = 0.0;
@@ -33,7 +32,6 @@ void scroll_callback(GLFWwindow*, double, double yoffset) {
 }
 
 int main() {
-    // --- 1. GLFW init ---
     if (!glfwInit()) {
         std::cerr << "Failed to init GLFW\n";
         return -1;
@@ -54,7 +52,6 @@ int main() {
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glfwSetScrollCallback(window, scroll_callback);
 
-    // --- 2. GLAD init ---
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
         std::cerr << "Failed to init GLAD\n";
         return -1;
@@ -62,7 +59,6 @@ int main() {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_PROGRAM_POINT_SIZE);
 
-    // --- 3. ImGui init ---
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImPlot::CreateContext();
@@ -70,33 +66,28 @@ int main() {
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330");
 
-    // --- 4. Simulation objects ---
+    // Simulation objects
     MathSim::Bounds stockBounds = {
         -50.0, 50.0,
         -50.0, 50.0,
         -20.0,  0.0
     };
-    MathSim::VoxelGrid      grid(stockBounds, 1.0);
-    MathSim::ToolpathEngine engine(grid);
-    MathSim::ForceModel     forceModel;
-    MathSim::GCodeParser    parser(engine);
-    MathSim::VoxelRenderer  renderer;
-    MathSim::UIManager      ui(grid, engine, forceModel, parser);
+    MathSim::VoxelGrid     grid(stockBounds, 1.0);
+    MathSim::ForceModel    forceModel;
+    MathSim::GCodeParser   parser;
+    MathSim::Simulator     simulator(grid, forceModel);
+    MathSim::VoxelRenderer renderer;
+    MathSim::UIManager     ui(grid, simulator, forceModel, parser);
 
-    // Initial buffer fill
     renderer.updateBuffer(grid);
-
-    // Seed mouse position
     glfwGetCursorPos(window, &g_lastMouseX, &g_lastMouseY);
 
-    // --- 5. Main loop ---
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
 
-        // Camera orbit — right mouse button drag
+        // Camera orbit
         double mx, my;
         glfwGetCursorPos(window, &mx, &my);
-
         if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS) {
             float dx = static_cast<float>(mx - g_lastMouseX);
             float dy = static_cast<float>(my - g_lastMouseY);
@@ -108,28 +99,39 @@ int main() {
         g_lastMouseX = mx;
         g_lastMouseY = my;
 
-        // Clear
+        // Run simulation steps this frame
+        int stepsPerFrame = static_cast<int>(ui.simulationSpeed * 10);
+        auto results = simulator.step(stepsPerFrame);
+
+        // Feed force data to UI chart and update voxel buffer
+        bool voxelsChanged = false;
+        for (auto& r : results) {
+            if (r.fx != 0.0 || r.fy != 0.0 || r.fz != 0.0) {
+                ui.addForceData(r.timeOffset, r.fx, r.fy, r.fz);
+            }
+            if (r.voxelsRemoved > 0) voxelsChanged = true;
+        }
+        if (voxelsChanged) {
+            renderer.updateBuffer(grid);
+        }
+
         glClearColor(0.12f, 0.12f, 0.12f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        // ImGui frame
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
         ui.render();
 
-        // Draw voxels
         renderer.draw(g_cam);
 
-        // Finalize ImGui
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
         glfwSwapBuffers(window);
     }
 
-    // --- 6. Cleanup ---
     ImPlot::DestroyContext();
     ImGui::DestroyContext();
     ImGui_ImplOpenGL3_Shutdown();

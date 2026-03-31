@@ -198,8 +198,10 @@ CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj: D:\Visual_
 CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\__msvc_bit_utils.hpp
 CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj: D:\machining_force_analyzer_new\include\Common.h
 CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\cmath
-CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj: D:\machining_force_analyzer_new\include\toolpath\ToolpathEngine.h
+CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj: D:\machining_force_analyzer_new\include\simulator\Simulator.h
 CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj: D:\machining_force_analyzer_new\include\voxel\VoxelGrid.h
+CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj: D:\machining_force_analyzer_new\include\force\ForceModel.h
+CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj: D:\machining_force_analyzer_new\include\toolpath\ToolpathEngine.h
 CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\fstream
 CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\__msvc_filebuf.hpp
 CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\streambuf
@@ -376,10 +378,11 @@ CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj: D:\machining_force_anal
 CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj: D:\machining_force_analyzer_new\include\voxel\VoxelGrid.h
 CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\vector
 CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\__msvc_bit_utils.hpp
-CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj: D:\machining_force_analyzer_new\include\toolpath\ToolpathEngine.h
 CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj: D:\machining_force_analyzer_new\include\gcode\GCodeParser.h
 CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\string
+CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj: D:\machining_force_analyzer_new\include\simulator\Simulator.h
 CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj: D:\machining_force_analyzer_new\include\force\ForceModel.h
+CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj: D:\machining_force_analyzer_new\include\toolpath\ToolpathEngine.h
 CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj: D:\machining_force_analyzer_new\include\renderer\VoxelRenderer.h
 CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj: D:\machining_force_analyzer_new\include\ui\UIManager.h
 
@@ -862,32 +865,31 @@ CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studi
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\cstddef
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\cstdint
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\stdint.h
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\machining_force_analyzer_new\include\toolpath\ToolpathEngine.h
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\machining_force_analyzer_new\include\voxel\VoxelGrid.h
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\vector
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\__msvc_bit_utils.hpp
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\climits
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\machining_force_analyzer_new\include\force\ForceModel.h
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\string
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\xstring
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\__msvc_sanitizer_annotate_container.hpp
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\xmemory
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\limits
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\cfloat
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\float.h"
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\cwchar
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\__msvc_string_view.hpp
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\iosfwd
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\cstdio
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdio.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h"
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\wchar.h"
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\cstring
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\string.h"
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memory.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memcpy_s.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\vcruntime_string.h
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h"
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\cwchar
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\wchar.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wconio.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wctype.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wdirect.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wio.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_share.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wprocess.h"
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wtime.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys\stat.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys\types.h"
@@ -905,31 +907,33 @@ CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studi
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\malloc.h"
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\zmmintrin.h
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\ammintrin.h
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\new
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\exception
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\vcruntime_exception.h
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\eh.h
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_terminate.h"
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\xatomic.h
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\xutility
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\__msvc_iter_core.hpp
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\utility
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\initializer_list
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\compare
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\concepts
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\cstring
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\string.h"
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memory.h"
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\climits
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\xmemory
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\limits
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\cfloat
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\float.h"
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\new
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\exception
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\vcruntime_exception.h
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\eh.h
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_terminate.h"
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\xatomic.h
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\tuple
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\xpolymorphic_allocator.h
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\machining_force_analyzer_new\include\force\ForceModel.h
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\string
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\xstring
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\__msvc_string_view.hpp
-CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\iosfwd
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\cctype
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\ctype.h"
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\machining_force_analyzer_new\include\voxel\VoxelGrid.h
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\vector
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\__msvc_bit_utils.hpp
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\machining_force_analyzer_new\include\gcode\GCodeParser.h
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\machining_force_analyzer_new\include\simulator\Simulator.h
+CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\machining_force_analyzer_new\include\toolpath\ToolpathEngine.h
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\vcpkg\installed\x64-windows\include\imgui.h
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\vcpkg\installed\x64-windows\include\imconfig.h
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\stdarg.h
@@ -1340,6 +1344,10 @@ D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\unordered_map:
 
 D:\Visual_studio\VC\Tools\MSVC\14.50.35717\include\__msvc_bit_utils.hpp:
 
+D:\vcpkg\installed\x64-windows\include\glm\gtc\..\ext\vector_int1.hpp:
+
+D:\machining_force_analyzer_new\include\simulator\Simulator.h:
+
 D:\vcpkg\installed\x64-windows\include\glm\.\ext\vector_float4.hpp:
 
 D:\machining_force_analyzer_new\include\voxel\VoxelGrid.h:
@@ -1729,7 +1737,5 @@ D:\vcpkg\installed\x64-windows\include\glm\gtc\..\gtc\vec1.hpp:
 D:\vcpkg\installed\x64-windows\include\glm\gtc\..\ext\vector_bool1_precision.hpp:
 
 D:\vcpkg\installed\x64-windows\include\glm\gtc\..\ext\vector_double1_precision.hpp:
-
-D:\vcpkg\installed\x64-windows\include\glm\gtc\..\ext\vector_int1.hpp:
 
 D:\vcpkg\installed\x64-windows\include\glm\gtc\type_ptr.inl:

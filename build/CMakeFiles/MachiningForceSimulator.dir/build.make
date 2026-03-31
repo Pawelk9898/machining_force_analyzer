@@ -141,10 +141,30 @@ CMakeFiles\MachiningForceSimulator.dir\src\renderer\VoxelRenderer.cpp.s: cmake_f
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\MachiningForceSimulator.dir\src\renderer\VoxelRenderer.cpp.s /c D:\machining_force_analyzer_new\src\renderer\VoxelRenderer.cpp
 <<
 
+CMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.obj: CMakeFiles\MachiningForceSimulator.dir\flags.make
+CMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.obj: D:\machining_force_analyzer_new\src\simulator\simulator.cpp
+CMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.obj: CMakeFiles\MachiningForceSimulator.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\machining_force_analyzer_new\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MachiningForceSimulator.dir/src/simulator/simulator.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.obj.d --working-dir=D:\machining_force_analyzer_new\build --filter-prefix="Uwaga: w tym pliku:  " -- D:\Visual_studio\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.obj /FdCMakeFiles\MachiningForceSimulator.dir\ /FS -c D:\machining_force_analyzer_new\src\simulator\simulator.cpp
+<<
+
+CMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MachiningForceSimulator.dir/src/simulator/simulator.cpp.i"
+	D:\Visual_studio\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64\cl.exe > CMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\machining_force_analyzer_new\src\simulator\simulator.cpp
+<<
+
+CMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MachiningForceSimulator.dir/src/simulator/simulator.cpp.s"
+	D:\Visual_studio\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.s /c D:\machining_force_analyzer_new\src\simulator\simulator.cpp
+<<
+
 CMakeFiles\MachiningForceSimulator.dir\src\toolpath\ToolpathEngine.cpp.obj: CMakeFiles\MachiningForceSimulator.dir\flags.make
 CMakeFiles\MachiningForceSimulator.dir\src\toolpath\ToolpathEngine.cpp.obj: D:\machining_force_analyzer_new\src\toolpath\ToolpathEngine.cpp
 CMakeFiles\MachiningForceSimulator.dir\src\toolpath\ToolpathEngine.cpp.obj: CMakeFiles\MachiningForceSimulator.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\machining_force_analyzer_new\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MachiningForceSimulator.dir/src/toolpath/ToolpathEngine.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\machining_force_analyzer_new\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MachiningForceSimulator.dir/src/toolpath/ToolpathEngine.cpp.obj"
 	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\MachiningForceSimulator.dir\src\toolpath\ToolpathEngine.cpp.obj.d --working-dir=D:\machining_force_analyzer_new\build --filter-prefix="Uwaga: w tym pliku:  " -- D:\Visual_studio\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\MachiningForceSimulator.dir\src\toolpath\ToolpathEngine.cpp.obj /FdCMakeFiles\MachiningForceSimulator.dir\ /FS -c D:\machining_force_analyzer_new\src\toolpath\ToolpathEngine.cpp
 <<
@@ -164,7 +184,7 @@ CMakeFiles\MachiningForceSimulator.dir\src\toolpath\ToolpathEngine.cpp.s: cmake_
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: CMakeFiles\MachiningForceSimulator.dir\flags.make
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: D:\machining_force_analyzer_new\src\ui\UIManager.cpp
 CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj: CMakeFiles\MachiningForceSimulator.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\machining_force_analyzer_new\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MachiningForceSimulator.dir/src/ui/UIManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\machining_force_analyzer_new\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MachiningForceSimulator.dir/src/ui/UIManager.cpp.obj"
 	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj.d --working-dir=D:\machining_force_analyzer_new\build --filter-prefix="Uwaga: w tym pliku:  " -- D:\Visual_studio\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj /FdCMakeFiles\MachiningForceSimulator.dir\ /FS -c D:\machining_force_analyzer_new\src\ui\UIManager.cpp
 <<
@@ -184,7 +204,7 @@ CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.s: cmake_force
 CMakeFiles\MachiningForceSimulator.dir\src\voxel\VoxelGrid.cpp.obj: CMakeFiles\MachiningForceSimulator.dir\flags.make
 CMakeFiles\MachiningForceSimulator.dir\src\voxel\VoxelGrid.cpp.obj: D:\machining_force_analyzer_new\src\voxel\VoxelGrid.cpp
 CMakeFiles\MachiningForceSimulator.dir\src\voxel\VoxelGrid.cpp.obj: CMakeFiles\MachiningForceSimulator.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\machining_force_analyzer_new\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MachiningForceSimulator.dir/src/voxel/VoxelGrid.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\machining_force_analyzer_new\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MachiningForceSimulator.dir/src/voxel/VoxelGrid.cpp.obj"
 	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\MachiningForceSimulator.dir\src\voxel\VoxelGrid.cpp.obj.d --working-dir=D:\machining_force_analyzer_new\build --filter-prefix="Uwaga: w tym pliku:  " -- D:\Visual_studio\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\MachiningForceSimulator.dir\src\voxel\VoxelGrid.cpp.obj /FdCMakeFiles\MachiningForceSimulator.dir\ /FS -c D:\machining_force_analyzer_new\src\voxel\VoxelGrid.cpp
 <<
@@ -207,6 +227,7 @@ MachiningForceSimulator_OBJECTS = \
 "CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj" \
 "CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj" \
 "CMakeFiles\MachiningForceSimulator.dir\src\renderer\VoxelRenderer.cpp.obj" \
+"CMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.obj" \
 "CMakeFiles\MachiningForceSimulator.dir\src\toolpath\ToolpathEngine.cpp.obj" \
 "CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj" \
 "CMakeFiles\MachiningForceSimulator.dir\src\voxel\VoxelGrid.cpp.obj"
@@ -218,6 +239,7 @@ MachiningForceSimulator.exe: CMakeFiles\MachiningForceSimulator.dir\src\force\Fo
 MachiningForceSimulator.exe: CMakeFiles\MachiningForceSimulator.dir\src\gcode\GCodeParser.cpp.obj
 MachiningForceSimulator.exe: CMakeFiles\MachiningForceSimulator.dir\src\main.cpp.obj
 MachiningForceSimulator.exe: CMakeFiles\MachiningForceSimulator.dir\src\renderer\VoxelRenderer.cpp.obj
+MachiningForceSimulator.exe: CMakeFiles\MachiningForceSimulator.dir\src\simulator\simulator.cpp.obj
 MachiningForceSimulator.exe: CMakeFiles\MachiningForceSimulator.dir\src\toolpath\ToolpathEngine.cpp.obj
 MachiningForceSimulator.exe: CMakeFiles\MachiningForceSimulator.dir\src\ui\UIManager.cpp.obj
 MachiningForceSimulator.exe: CMakeFiles\MachiningForceSimulator.dir\src\voxel\VoxelGrid.cpp.obj
@@ -228,7 +250,7 @@ MachiningForceSimulator.exe: D:\vcpkg\installed\x64-windows\debug\lib\imguid.lib
 MachiningForceSimulator.exe: D:\vcpkg\installed\x64-windows\debug\lib\implotd.lib
 MachiningForceSimulator.exe: D:\vcpkg\installed\x64-windows\debug\lib\glfw3dll.lib
 MachiningForceSimulator.exe: CMakeFiles\MachiningForceSimulator.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\machining_force_analyzer_new\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable MachiningForceSimulator.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\machining_force_analyzer_new\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable MachiningForceSimulator.exe"
 	D:\vcpkg\downloads\tools\cmake-3.31.10-windows\cmake-3.31.10-windows-x86_64\bin\cmake.exe -E vs_link_exe --msvc-ver=1950 --intdir=CMakeFiles\MachiningForceSimulator.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100261~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100261~1.0\x64\mt.exe --manifests -- D:\Visual_studio\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\MachiningForceSimulator.dir\objects1.rsp @<<
  /out:MachiningForceSimulator.exe /implib:MachiningForceSimulator.lib /pdb:D:\machining_force_analyzer_new\build\MachiningForceSimulator.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  D:\vcpkg\installed\x64-windows\debug\lib\glad.lib D:\vcpkg\installed\x64-windows\debug\lib\glm.lib D:\vcpkg\installed\x64-windows\debug\lib\imguid.lib D:\vcpkg\installed\x64-windows\debug\lib\implotd.lib opengl32.lib D:\vcpkg\installed\x64-windows\debug\lib\glfw3dll.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
